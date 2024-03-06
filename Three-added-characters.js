@@ -32,8 +32,18 @@ return the added character as described above.
 
 // Solution
 
-function addedChar(s1, s2) {
+function addedChar(s1, s2){
   let s11 = [...s1].sort()
   let s22 = [...s2].sort()
   return s22.find((el, i) => el !== s11[i])
+}
+
+// or
+
+function addedChar(s1, s2) {
+  const newStr1 = s1.split('').sort();
+  const newStr2 = s2.split('').sort();
+  for (let i = 0; i < newStr2.length; i++) {
+    if (newStr1[i] !== newStr2[i]) return newStr2[i];
+  }
 }
