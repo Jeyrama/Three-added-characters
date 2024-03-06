@@ -28,3 +28,6 @@ and there will always be three added characters in string2.
 Write the function addedChar() that takes two strings and 
 return the added character as described above.
 */
+
+
+// Solution
