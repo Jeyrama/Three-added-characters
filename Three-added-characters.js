@@ -47,3 +47,13 @@ function addedChar(s1, s2) {
     if (newStr1[i] !== newStr2[i]) return newStr2[i];
   }
 }
+
+// or
+
+function addedChar(s1, s2) {
+  let code = 0;
+  for (let i = 0; i < s2.length; i += 1) {
+    code += s2.charCodeAt(i) - ~~s1.charCodeAt(i);
+  }
+  return String.fromCharCode(code / 3);
+}
